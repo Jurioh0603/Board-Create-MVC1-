@@ -1,0 +1,10 @@
+@import url(http://fonts.googleapis.com/earlyaccess/nanumgothic.css);
+/*나눔고딕체*/
+@import url(http://fonts.googleapis.com/earlyaccess/hanna.css);
+/*배민한나체*/
+* {
+	font-family : 'Nanum Gothic';
+}/*전체를 의미하는 (*) 을 사용해서 전체 기본 글시체를 나눔고딕으로 한다는 의미*/
+h1 {
+	font-family : 'Hanna';
+}/*h1 태그는 한나체로 적용한다는 의미*/
