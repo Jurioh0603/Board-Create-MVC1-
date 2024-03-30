@@ -149,7 +149,7 @@ public class BbsDAO {
 			pstmt.setString(1, bbsTitle); //재목
 			pstmt.setString(2, bbsContent); //내용
 			pstmt.setInt(3, bbsID); //id
-			return pstmt.executeUpdate(); //성공시 0이상의 값 반환(1,2,3 중)
+			return pstmt.executeUpdate(); //성공시 0이상의 값 반환
 		} catch (Exception e) {
 			e.printStackTrace();
 		}

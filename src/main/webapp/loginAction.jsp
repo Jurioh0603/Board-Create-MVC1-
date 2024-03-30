@@ -22,8 +22,8 @@
 		if (userID != null) {
 			PrintWriter script = response.getWriter();
 			script.print("<script>");
-			script.print("alert('이미 로그인이 되어있습니다.')");
-			script.print("location.href = 'main.jsp'");
+			script.print("alert('이미 로그인이 되어있습니다.');");
+			script.print("location.href = 'main.jsp';");
 			script.print("</script>");
 		}
 		UserDAO userDAO = new UserDAO();
@@ -33,25 +33,25 @@
 			session.setAttribute("userID", user.getUserID()); //사용자의 세션 등록
 			PrintWriter script = response.getWriter(); //script 사용할 수 있게함
 			script.println("<script>");
-			script.println("location.href = 'main.jsp'"); //로그인 성공시 이동 페이지
+			script.println("location.href = 'main.jsp';"); //로그인 성공시 이동 페이지
 			script.println("</script>");
 		} else if (result == 0) {
 			PrintWriter script = response.getWriter();
 			script.println("<script>");
-			script.println("alert('비밀번호가 틀립니다.')"); //로그인 실패
-			script.println("history.back()"); //이전 페이지로 사용자를 이동시킴
+			script.println("alert('비밀번호가 틀립니다.');"); //로그인 실패
+			script.println("history.back();"); //이전 페이지로 사용자를 이동시킴
 			script.println("</script>");
 		} else if (result == -1) {
 			PrintWriter script = response.getWriter();
 			script.println("<script>");
-			script.println("alert('존재하지 않는 아이디입니다.')"); //로그인 실패
-			script.println("history.back()"); //이전 페이지로 사용자를 이동시킴
+			script.println("alert('존재하지 않는 아이디입니다.');"); //로그인 실패
+			script.println("history.back();"); //이전 페이지로 사용자를 이동시킴
 			script.println("</script>");
 		} else if (result == -2) {
 			PrintWriter script = response.getWriter(); 
 			script.println("<script>");
-			script.println("alert('데이터베이스 오류가 발생했습니다.')"); //로그인 실패
-			script.println("history.back()"); //이전 페이지로 사용자를 이동시킴
+			script.println("alert('데이터베이스 오류가 발생했습니다.');"); //로그인 실패
+			script.println("history.back();"); //이전 페이지로 사용자를 이동시킴
 			script.println("</script>");
 		}
 	%>

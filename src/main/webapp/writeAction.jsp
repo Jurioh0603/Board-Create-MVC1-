@@ -22,15 +22,15 @@
 		if (userID == null) {
 			PrintWriter script = response.getWriter();
 			script.print("<script>");
-			script.print("alert('로그인을 하세요.')");
-			script.print("location.href = 'login.jsp'");
+			script.print("alert('로그인을 하세요.');");
+			script.print("location.href = 'login.jsp';");
 			script.print("</script>");
 		} else { //로그인한 사람에게 보이는 내용
 			if(bbs.getBbsTitle() == null || bbs.getBbsContent() == null) { //내용 제목 입력 안하면 아래 결과
 				PrintWriter script = response.getWriter(); //script 사용할 수 있게함
 				script.println("<script>");
-				script.println("alert('입력이 안 된 사항이 있습니다.')");
-				script.println("history.back()"); //이전 페이지로 사용자를 이동시킴
+				script.println("alert('입력이 안 된 사항이 있습니다.');");
+				script.println("history.back();"); //이전 페이지로 사용자를 이동시킴
 				script.println("</script>");
 			} else {
 				BbsDAO bbsDAO = new BbsDAO();
@@ -39,14 +39,14 @@
 				if (result == -1) {
 					PrintWriter script = response.getWriter();
 					script.println("<script>");
-					script.println("alert('글쓰기에 실패했습니다.')");
-					script.println("history.back()");
+					script.println("alert('글쓰기에 실패했습니다.');");
+					script.println("history.back();");
 					script.println("</script>");
 				} //회원가입 성공하여 로그인 페이지로 이동
 				else {
 					PrintWriter script = response.getWriter(); 
 					script.println("<script>");
-					script.println("location.href = 'bbs.jsp'"); //성공시 게시판으로 돌아감
+					script.println("location.href = 'bbs.jsp';"); //성공시 게시판으로 돌아감
 					script.println("</script>");
 				}
 			}
